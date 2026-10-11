@@ -1,0 +1,10 @@
+# Usuarios del servidor FTP. Las lineas que empiezan con # se ignoran.
+# Activo: SI / NO (baja logica; no hace falta borrar la fila)
+# Tipo: AD (credenciales de dominio, Password se ignora) | LOCAL (usuario y Password de esta fila)
+# Password (LOCAL): texto plano o un hash generado con  .\Start-FtpServer.ps1 -GenerarHash
+# Ruta: carpeta unica de acceso (C:\... o \\servidor\recurso). Debe existir.
+# Permisos: LECTURA, ESCRITURA, ELIMINAR combinados con +  (ej. LECTURA+ESCRITURA)
+# InactividadSeg: segundos sin actividad antes de cerrar la sesion (vacio = valor por defecto del script)
+Usuario,Activo,Tipo,Password,Ruta,Permisos,InactividadSeg
+jperez,NO,AD,,C:\FTP\jperez,LECTURA+ESCRITURA+ELIMINAR,600
+reportes,NO,LOCAL,CambiaEsta1,C:\FTP\reportes,LECTURA,120

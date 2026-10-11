@@ -1,0 +1,7 @@
+# usuarios reales (pueden tener passwords)
+config/users.csv
+
+# logs y certificados
+*.log
+*.log.old
+*.pfx
